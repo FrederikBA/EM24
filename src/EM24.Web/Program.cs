@@ -1,5 +1,9 @@
+using EM24.Core.Interfaces.DomainServices;
 using EM24.Core.Interfaces.Repositories;
+using EM24.Core.Services;
 using EM24.Infrastructure.Data;
+using EM24.Web.Interfaces;
+using EM24.Web.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -37,6 +41,10 @@ builder.Services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
 
 
 //Build services
+builder.Services.AddScoped<IPlayerService, PlayerService>();
+
+//Build view model services
+builder.Services.AddScoped<IPlayerViewModelService, PlayerViewModelService>();
 
 var app = builder.Build();
 
