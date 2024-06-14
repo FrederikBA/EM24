@@ -24,6 +24,6 @@ public class PlayerViewModelService : IPlayerViewModelService
             Id = player.Id,
             Name = player.Name,
             Points = _scoreService.GetPlayerScore(player.Id).Result
-        }).ToList();
+        }).OrderByDescending(x => x.Points).ToList();
     }
 }

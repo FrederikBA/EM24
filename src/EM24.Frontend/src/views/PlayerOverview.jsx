@@ -19,22 +19,22 @@ const PlayerOverview = () => {
     }, []);
 
     return (
-        <div className="center">
-            <Table>
+        <div className="center-container">
+            <Table className="center-table">
                 <thead>
                     <tr>
                         <th></th>
-                        <th className="table-header">Navn</th>
-                        <th className="table-header">Point</th>
+                        <th className="center-content">Navn</th>
+                        <th className="center-content">Point</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     {players.map(player => (
-                        <tr className="table-row" key={player.id}>
+                        <tr key={player.id}>
                             <td></td>
-                            <td className="table-item player-table-item"><span className="match-number">{player.name}</span></td>
-                            <td className="table-item player-table-item"><span className="score">{player.points}</span></td>
+                            <td className="center-content"><span className="match-number">{player.name}</span></td>
+                            <td className="center-content"><span className="score">{player.points}</span></td>
                             <td></td>
                         </tr>
                     ))}
