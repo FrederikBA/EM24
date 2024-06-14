@@ -1,0 +1,31 @@
+USE EM24;
+
+INSERT INTO [dbo].[Games] (RightTeam, LeftTeam, Result)
+VALUES
+    ('Tyskland', 'Skotland', NULL),
+    ('Ungarn', 'Schweiz', NULL),
+    ('Spanien', 'Kroatien', NULL),
+    ('Polen', 'Holland', NULL),
+    ('Slovenien', 'Danmark', NULL),
+    ('Serbien', 'England', NULL),
+    ('Belgien', 'Slovakiet', NULL),
+    ('Østrig', 'Frankrig', NULL),
+    ('Portugal', 'Tjekkiet', NULL),
+    ('Tyskland', 'Ungarn', NULL),
+    ('Skotland', 'Schweiz', NULL),
+    ('Slovenien', 'Serbien', NULL),
+    ('Danmark', 'England', NULL),
+    ('Spanien', 'Italien', NULL),
+    ('Polen', 'Østrig', NULL),
+    ('Holland', 'Frankrig', NULL),
+    ('Tyrkiet', 'Portugal', NULL),
+    ('Schweiz', 'Tyskland', NULL),
+    ('Skotland', 'Ungarn', NULL),
+    ('Kroatien', 'Italien', NULL),
+    ('Holland', 'Østrig', NULL),
+    ('Frankrig', 'Polen', NULL),
+    ('England', 'Slovenien', NULL),
+    ('Danmark', 'Serbien', NULL),
+    ('Slovakiet', 'Rumænien', NULL),
+    ('Ukraine', 'Belgien', NULL),
+    ('Tjekkiet', 'Tyrkiet', NULL);

@@ -8,4 +8,5 @@ public class Game
     public string? RightTeam { get; set; }
     public string? LeftTeam { get; set; }
     public Result? Result { get; set; }
+    public List<PlayerGuess>? PlayerGuesses { get; set; } = new();
 }
