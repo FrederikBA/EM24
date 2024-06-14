@@ -18,4 +18,10 @@ public class GameService : IGameService
         var games = await _gameReadRepository.ListAsync();
         return games;
     }
+
+    public async Task<Game> GetGameById(int id)
+    {
+        var game = await _gameReadRepository.GetByIdAsync(id);
+        return game;
+    }
 }

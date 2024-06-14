@@ -5,4 +5,5 @@ namespace EM24.Core.Interfaces.DomainServices;
 public interface IGameService
 {
     public Task<List<Game>> GetGames();
+    public Task<Game> GetGameById(int id);
 }

@@ -43,9 +43,11 @@ builder.Services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
 //Build services
 builder.Services.AddScoped<IPlayerService, PlayerService>();
 builder.Services.AddScoped<IGameService, GameService>();
+builder.Services.AddScoped<IScoreService, ScoreService>();
 
 //Build view model services
 builder.Services.AddScoped<IPlayerViewModelService, PlayerViewModelService>();
+builder.Services.AddScoped<IGameViewModelService, GameViewModelService>();
 
 var app = builder.Build();
 

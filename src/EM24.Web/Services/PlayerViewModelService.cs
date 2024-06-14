@@ -7,10 +7,12 @@ namespace EM24.Web.Services;
 public class PlayerViewModelService : IPlayerViewModelService
 {
     private readonly IPlayerService _playerService;
+    private readonly IScoreService _scoreService;
 
-    public PlayerViewModelService(IPlayerService playerService)
+    public PlayerViewModelService(IPlayerService playerService, IScoreService scoreService)
     {
         _playerService = playerService;
+        _scoreService = scoreService;
     }
 
     public async Task<List<PlayerViewModel>> GetPlayers()
@@ -21,7 +23,7 @@ public class PlayerViewModelService : IPlayerViewModelService
         {
             Id = player.Id,
             Name = player.Name,
-            Points = player.Points
+            Points = _scoreService.GetPlayerScore(player.Id).Result
         }).ToList();
     }
 }

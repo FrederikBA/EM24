@@ -6,7 +6,7 @@ namespace EM24.Core.Services;
 
 public class PlayerService : IPlayerService
 {
-    private IReadRepository<Player> _playerReadRepository;
+    private readonly IReadRepository<Player> _playerReadRepository;
 
     public PlayerService(IReadRepository<Player> playerReadRepository)
     {
@@ -18,5 +18,11 @@ public class PlayerService : IPlayerService
         var players = await _playerReadRepository.ListAsync();
         
         return players;
+    }
+
+    public async Task<Player> GetPlayerById(int id)
+    {
+        var player = await _playerReadRepository.GetByIdAsync(id);
+        return player;
     }
 }

@@ -1,4 +1,5 @@
 using EM24.Core.Interfaces.DomainServices;
+using EM24.Core.Models;
 using EM24.Web.Interfaces;
 using EM24.Web.Models;
 
@@ -16,13 +17,35 @@ public class GameViewModelService : IGameViewModelService
     public async Task<List<GameViewModel>> GetGames()
     {
         var games = await _gameService.GetGames();
-        
-        return games.Select(game => new GameViewModel
+
+        return games.Select(game => 
         {
-            Id = game.Id,
-            RightTeam = game.RightTeam!,
-            LeftTeam = game.LeftTeam!,
-            Result = game.Result,
+            string result;
+            if (game.Result == (Result?)1)
+            {
+                result = game.RightTeam! + " vinder";
+            }
+            else if (game.Result == (Result?)2)
+            {
+                result = game.LeftTeam! + " vinder";
+            }
+            else if (game.Result == 0)
+            {
+                result = "Uafgjort";
+            }
+            else
+            {
+                result = "Ikke spillet";
+            }
+
+            return new GameViewModel
+            {
+                Id = game.Id,
+                RightTeam = game.RightTeam!,
+                LeftTeam = game.LeftTeam!,
+                Result = result
+            };
         }).ToList();
     }
+
 }
