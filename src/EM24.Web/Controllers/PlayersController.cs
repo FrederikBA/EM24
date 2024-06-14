@@ -6,11 +6,11 @@ namespace EM24.Web.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class PlayerController : ControllerBase
+public class PlayersController : ControllerBase
 {
     private readonly IPlayerViewModelService _playerViewModelService;
 
-    public PlayerController(IPlayerViewModelService playerViewModelService)
+    public PlayersController(IPlayerViewModelService playerViewModelService)
     {
         _playerViewModelService = playerViewModelService;
     }

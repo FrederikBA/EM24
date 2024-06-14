@@ -42,6 +42,7 @@ builder.Services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
 
 //Build services
 builder.Services.AddScoped<IPlayerService, PlayerService>();
+builder.Services.AddScoped<IGameService, GameService>();
 
 //Build view model services
 builder.Services.AddScoped<IPlayerViewModelService, PlayerViewModelService>();
