@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EM24.Core", "src\EM24.Core\EM24.Core.csproj", "{BD563A36-8895-4F5B-AD51-66A889FF5D05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EM24.Infrastructure", "src\EM24.Infrastructure\EM24.Infrastructure.csproj", "{A11070A7-06CC-4E5F-8420-2E547A93F549}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EM24.Web", "src\EM24.Web\EM24.Web.csproj", "{07862AA1-C355-4640-8F4B-C2AC5465323D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD563A36-8895-4F5B-AD51-66A889FF5D05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD563A36-8895-4F5B-AD51-66A889FF5D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD563A36-8895-4F5B-AD51-66A889FF5D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD563A36-8895-4F5B-AD51-66A889FF5D05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A11070A7-06CC-4E5F-8420-2E547A93F549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A11070A7-06CC-4E5F-8420-2E547A93F549}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A11070A7-06CC-4E5F-8420-2E547A93F549}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A11070A7-06CC-4E5F-8420-2E547A93F549}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07862AA1-C355-4640-8F4B-C2AC5465323D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07862AA1-C355-4640-8F4B-C2AC5465323D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07862AA1-C355-4640-8F4B-C2AC5465323D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07862AA1-C355-4640-8F4B-C2AC5465323D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
