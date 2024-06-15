@@ -23,11 +23,11 @@ public class GameViewModelService : IGameViewModelService
             string result;
             if (game.Result == (Result?)1)
             {
-                result = game.RightTeam! + " vinder";
+                result = game.RightTeam!;
             }
             else if (game.Result == (Result?)2)
             {
-                result = game.LeftTeam! + " vinder";
+                result = game.LeftTeam!;
             }
             else if (game.Result == 0)
             {
